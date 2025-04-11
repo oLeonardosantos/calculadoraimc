@@ -2,6 +2,7 @@ package com.comunidadedevspace.imc
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Contacts.SettingsColumns.KEY
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
@@ -14,9 +15,9 @@ class MainActivity : AppCompatActivity() {
 
         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
         val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
-        val btncalcular = findViewById<Button>(R.id.btn_calcular)
+        val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
-        btncalcular.setOnClickListener {
+        btnCalcular.setOnClickListener {
 
             val pesoStr: String = edtPeso.text.toString()
             val alturaStr: String = edtAltura.text.toString()
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 // itent - classe do projeto android
 
                 val intent = Intent(this, ResultActivity::class.java)
-                intent.putExtra("123", resultado)
+                intent.putExtra(KEY_RESULT_IMC, resultado)
                 startActivity(intent)
 
                 println("Leo acao do botom " + resultado)
