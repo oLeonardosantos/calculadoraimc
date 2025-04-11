@@ -12,8 +12,9 @@
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="48sp"
+        android:textSize="52sp"
         android:textStyle="bold"
+        android:maxLength="5"
         tools:text="23.66" />
 
     <TextView
@@ -27,6 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Normal" />
+        tools:text="Normal" />
 
 </LinearLayout>
