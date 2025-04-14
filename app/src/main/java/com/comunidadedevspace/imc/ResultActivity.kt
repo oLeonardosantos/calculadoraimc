@@ -1,5 +1,6 @@
 package com.comunidadedevspace.imc
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +13,6 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         val result = intent.getFloatExtra(KEY_RESULT_IMC, 0f)
-
         val tvResult = findViewById<TextView>(R.id.tv_result)
         val tvClassificacao = findViewById<TextView>(R.id.tv_classificacao)
 
@@ -29,7 +29,6 @@ class ResultActivity : AppCompatActivity() {
         } else {
             "OBESIDADE GRAVE"
         }
-
         tvClassificacao.text = classificacao
     }
 }
