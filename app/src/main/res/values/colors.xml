@@ -5,4 +5,8 @@
 
     <color name="primary_400">#cd00ea</color>
     <color name="primary_900">#5c00d2</color>
+    <color name="yellow">#FBEF02</color>
+    <color name="orange">#FF5722</color>
+    <color name="green">#31FF03</color>
+    <color name="red">#FF0109</color>
 </resources>

@@ -1,6 +1,7 @@
 package com.comunidadedevspace.imc
 
 import android.graphics.Color
+import android.graphics.ColorFilter
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +30,20 @@ class ResultActivity : AppCompatActivity() {
         } else {
             "OBESIDADE GRAVE"
         }
+
+        val classificacaoColor: Int = if (result <= 18.5f){
+            getColor(R.color.yellow)
+        } else if(result > 18.5f && result <= 24.9f){
+            getColor(R.color.green)
+        } else if(result > 25f && result <= 29.9f){
+            getColor(R.color.orange)
+        } else if (result > 30f && result <= 39.9f){
+            getColor(R.color.red)
+        } else {
+            getColor(R.color.black)
+        }
+
+        tvClassificacao.setTextColor(classificacaoColor)
         tvClassificacao.text = classificacao
     }
 }
